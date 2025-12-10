@@ -6,10 +6,18 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 50px;
-      background-color: #ffffff; /* plain white */
+      background-color: #f5f5f5; /* soft gray background */
       color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #ffffff; /* white content box */
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     h1 {
       font-size: 36px;
@@ -26,24 +34,23 @@
     p {
       font-size: 16px;
       line-height: 1.5;
-      max-width: 700px;
-      margin: 10px auto;
+      margin: 10px 0;
     }
     ul {
       list-style: none;
       padding: 0;
-      max-width: 700px;
-      margin: 0 auto;
+      margin: 0;
     }
     li {
       margin-bottom: 15px;
       padding: 10px;
-      border: 1px solid #eee;
-      border-radius: 5px;
+      border-left: 4px solid #007bff; /* blue accent bar */
+      border-radius: 3px;
+      background-color: #f9f9f9;
       transition: background-color 0.3s, transform 0.2s;
     }
     li:hover {
-      background-color: #f9f9f9;
+      background-color: #e9f0ff;
       transform: translateY(-2px);
     }
     a {
@@ -54,40 +61,32 @@
     a:hover {
       text-decoration: underline;
     }
-    img {
-      vertical-align: middle;
-      margin-right: 5px;
-    }
   </style>
 </head>
 <body>
-  
-  <h1>Hello, I’m Daniel Alvarez</h1>
-  <p>Welcome to my personal portfolio website!</p>
+  <div class="container">
+    <h1>Hello, I’m Daniel Alvarez</h1>
+    <p>Welcome to my personal portfolio website!</p>
 
-  <h2>About Me</h2>
-  <p>I’m passionate about software development, web technologies, and building clean,
-     functional applications using PHP, MySQL, CodeIgniter, and JavaScript.</p>
+    <h2>About Me</h2>
+    <p>I’m passionate about software development, web technologies, and building clean,
+       functional applications using PHP, MySQL, CodeIgniter, and JavaScript.</p>
 
-  <h2>Internship Projects</h2>
-  <ul>
-    <li>
-      <b>FEU Tech – Document Masterlist & Monitoring System</b> –
-      <a href="https://github.com/dj-alvarez/djalvarez-portfolio/blob/main/FeuTech-Portfolio.pdf" target="_blank">
-        View
-      </a>
-    </li>
-    <li>
-       <b>Oikos Technologies – MRR Real Estate Website</b> –
-      <a href="https://github.com/dj-alvarez/danielalvarez-portfolio/blob/main/OikosTechnologies.pdf" target="_blank">
-        View
-      </a>
-    </li>
-  </ul>
+    <h2>Internship Projects</h2>
+    <ul>
+      <li>
+        <b>FEU Tech – Document Masterlist & Monitoring System</b> –
+        <a href="https://github.com/dj-alvarez/djalvarez-portfolio/blob/main/FeuTech-Portfolio.pdf" target="_blank">View</a>
+      </li>
+      <li>
+         <b>Oikos Technologies – MRR Real Estate Website</b> –
+        <a href="https://github.com/dj-alvarez/danielalvarez-portfolio/blob/main/OikosTechnologies-Portfolio.pdf" target="_blank">View</a>
+      </li>
+    </ul>
 
-  <h2>Contact</h2>
-  <p>Email: <b>alvarezdanieljosh@gmail.com</b></p>
-  <p>Mobile: <b>0977 481 7383</b></p>
-
+    <h2>Contact</h2>
+    <p>Email: <b>alvarezdanieljosh@gmail.com</b></p>
+    <p>Mobile: <b>0977 481 7383</b></p>
+  </div>
 </body>
 </html>
