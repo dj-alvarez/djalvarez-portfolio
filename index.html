@@ -10,10 +10,10 @@
       background-color: #111;
       color: #fff;
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
     }
 
-    /* Left column (Home + Nav) */
+    /* Left column: photo + intro */
     .left-column {
       width: 35%;
       background-color: #111;
@@ -22,15 +22,20 @@
       border-right: 2px solid #333;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      position: sticky;
-      top: 0;
-      height: 100vh;
+      align-items: center;
+      text-align: center;
+    }
+
+    .left-column img {
+      width: 200px;
+      border-radius: 50%;
+      border: 4px solid #ff3b3f;
+      margin-bottom: 20px;
     }
 
     .left-column h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 10px;
       color: #ff3b3f;
     }
 
@@ -39,36 +44,15 @@
       line-height: 1.5;
     }
 
-    nav {
-      margin-top: 50px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 20px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ff3b3f;
-    }
-
-    /* Right column (dynamic content) */
+    /* Right column: projects + contact */
     .right-column {
       width: 65%;
       padding: 50px 40px;
-      overflow-y: auto;
-    }
-
-    section {
-      display: none;
-    }
-    section.active {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
     h2 {
@@ -81,6 +65,7 @@
     ul {
       list-style: none;
       padding: 0;
+      margin: 0 0 30px 0;
     }
 
     li {
@@ -102,6 +87,7 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     a:hover {
       text-decoration: underline;
     }
@@ -112,9 +98,11 @@
       }
       .left-column, .right-column {
         width: 100%;
-        height: auto;
-        border-right: none;
         padding: 20px;
+        border-right: none;
+      }
+      .right-column {
+        text-align: center;
       }
     }
   </style>
@@ -122,44 +110,28 @@
 <body>
 
   <div class="left-column">
+    <img src="b9df3aee-1f96-40df-8457-2227d8044133.png" alt="Daniel Alvarez">
     <h1>Hi, I'm Daniel Alvarez</h1>
     <p>Software developer passionate about web technologies, PHP, MySQL, CodeIgniter, and building clean, functional applications.</p>
-
-    <nav>
-      <a href="#projects" onclick="showSection('projects')">Projects</a>
-      <a href="#contact" onclick="showSection('contact')">Contact</a>
-    </nav>
   </div>
 
   <div class="right-column">
-    <section id="projects">
-      <h2>Internship Projects</h2>
-      <ul>
-        <li>
-          <b>FEU Tech – Document Masterlist & Monitoring System</b> –
-          <a href="https://github.com/dj-alvarez/djalvarez-portfolio/blob/main/FeuTech-Portfolio.pdf" target="_blank">View</a>
-        </li>
-        <li>
-          <b>Oikos Technologies – MRR Real Estate Website</b> –
-          <a href="https://github.com/dj-alvarez/danielalvarez-portfolio/blob/main/OikosTechnologies-Portfolio.pdf" target="_blank">View</a>
-        </li>
-      </ul>
-    </section>
+    <h2>Internship Projects</h2>
+    <ul>
+      <li>
+        <b>FEU Tech – Document Masterlist & Monitoring System</b> – 
+        <a href="https://github.com/dj-alvarez/djalvarez-portfolio/blob/main/FeuTech-Portfolio.pdf" target="_blank">View</a>
+      </li>
+      <li>
+        <b>Oikos Technologies – MRR Real Estate Website</b> – 
+        <a href="https://github.com/dj-alvarez/danielalvarez-portfolio/blob/main/OikosTechnologies-Portfolio.pdf" target="_blank">View</a>
+      </li>
+    </ul>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <b>alvarezdanieljosh@gmail.com</b></p>
-      <p>Mobile: <b>0977 481 7383</b></p>
-    </section>
+    <h2>Contact</h2>
+    <p>Email: <b>alvarezdanieljosh@gmail.com</b></p>
+    <p>Mobile: <b>0977 481 7383</b></p>
   </div>
-
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
 
 </body>
 </html>
